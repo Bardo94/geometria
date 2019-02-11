@@ -1,16 +1,27 @@
-
+/**
+ * @version 1.2
+ * @author Gabriel Madrid
+ *
+ */
 public class Triangulo_GML extends FiguraGeometrica_GML {
 	private double lado1;
 	private double lado2;
 	private double lado3;
 	
+	/**
+	 * Método contructor para crear un objeto de la clase.
+	 * @param tipoFigura
+	 * @param lado1
+	 * @param lado2
+	 * @param lado3
+	 */
 	public Triangulo_GML(String tipoFigura, double lado1, double lado2, double lado3) {
 		super(tipoFigura);
 		lado1 = lado1;
 		lado2 = lado2;
 		lado3 = lado3;
 	}
-
+	
 	@Override
 	public double perimetro() {
 		return lado1 + lado2 + lado3;
@@ -22,6 +33,4 @@ public class Triangulo_GML extends FiguraGeometrica_GML {
 		sp = this.semiPerimetro();
 		return Math.sqrt(sp * (sp-lado1) * (sp-lado2) * (sp-lado3));
 	}
-	
-	
 }
