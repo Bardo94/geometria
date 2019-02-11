@@ -5,8 +5,11 @@ public class Circulo_GML extends FiguraGeometrica_GML {
 	static final double PI = 3.1416;
 	
 	public Circulo_GML(double r, String tipoFigura) {
+		
 		super(tipoFigura);
-		radio = r;
+		
+		if (r < 0) { radio = r * -1;  }
+		else { radio = r; }
 	}
 
 	@Override
